@@ -1,0 +1,30 @@
+package programmingAssignment;
+public class duplicatechar {
+	String unichar(String text)
+	{
+		String temp = "";
+		boolean flag = true;
+		for(int i=0;i<text.length();i++)
+		{
+			for(int j=i+1;j<text.length();j++)
+			{
+				if(text.charAt(i)==text.charAt(j))
+				{
+					flag = false;
+					break;
+				}
+			}
+			if(flag)
+			{
+				temp = temp+text.charAt(i);
+			}
+		}
+		return temp;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "java";//jv.....//java -----jva
+		duplicatechar character = new duplicatechar();
+		System.out.println(character.unichar(str));
+	}
+}
